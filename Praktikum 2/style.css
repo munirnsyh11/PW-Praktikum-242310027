@@ -1,0 +1,42 @@
+p {
+    color: red;
+    text-align: center;
+    font-size: 100px;
+}
+#paraf_id {
+    color: blue;
+    text-align: center;
+    font-size: 80px;
+}
+.paraf_class {
+    color: green;
+    text-align: center;
+    font-size: 50px;
+}
+
+div p{
+    color: purple;
+    background-color: yellow;
+}   
+
+.box {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color: cyan;
+    color: blue;
+    font-size: 100px;
+    text-align: center;
+    font-style: italic;
+}
+.list-style {
+  list-style-type: square;
+}
+
+div .nama {
+    color: rgb(238, 25, 25);
+    background-color: rgb(255, 255, 0);
+    font-size: 20px;
+    font-weight: bold;
+}

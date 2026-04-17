@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabungan</title>
+    <script>
+        function hitung() {
+            var saldo = parseFloat(document.formku.saldo.value);
+            var bunga = parseFloat(document.formku.bunga.value) / 100;
+            var waktu = parseInt(document.formku.waktu.value);
+
+            var hasil = "";
+
+            for (var i = 1; i <= waktu; i++) {
+                saldo = saldo + (saldo * bunga);
+                hasil += "Saldo Bulan " + i + " = " + saldo + "\n";
+            }
+
+            alert(hasil);
+        }
+    </script>
+</head>
+
+<body>
+<form name="formku">
+Saldo : <input type="text" name="saldo"><br>
+Bunga (%) : <input type="text" name="bunga"><br>
+Waktu (bulan): <input type="text" name="waktu"><br>
+
+<input type="button" value="Hitung" onclick="hitung()">
+</form>
+</body>
+</html>

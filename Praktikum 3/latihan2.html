@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel IBIK</title>
+    <script>
+        function hitung() {
+            var nama = document.formku.nama.value;
+            var tujuan = document.formku.tujuan.value;
+            var kelas = document.formku.kelas.value;
+            var jumlah = parseInt(document.formku.jumlah.value);
+            var member = document.formku.member.checked;
+
+            var harga = 0;
+
+            if (tujuan == "Jakarta") {
+                if (kelas == "Eksekutif") harga = 70000;
+                else if (kelas == "Bisnis") harga = 40000;
+                else harga = 10000;
+            }
+
+            if (tujuan == "Solo") {
+                if (kelas == "Eksekutif") harga = 80000;
+                else if (kelas == "Bisnis") harga = 50000;
+                else harga = 20000;
+            }
+
+            if (tujuan == "Surabaya") {
+                if (kelas == "Eksekutif") harga = 90000;
+                else if (kelas == "Bisnis") harga = 60000;
+                else harga = 30000;
+            }
+
+            var subtotal = harga * jumlah;
+            var diskon = member ? subtotal * 0.1 : 0;
+            var total = subtotal - diskon;
+
+            alert(
+                "Nama: " + nama +
+                "\nHarga Tiket: " + harga +
+                "\nSubtotal: " + subtotal +
+                "\nDiskon: " + diskon +
+                "\nTotal Bayar: " + total
+            );
+        }
+    </script>
+</head>
+
+<body>
+<h2>Travel IBIK</h2>
+<form name="formku">
+
+Nama : <input type="text" name="nama"><br>
+
+Tujuan :
+<select name="tujuan">
+    <option>Jakarta</option>
+    <option>Solo</option>
+    <option>Surabaya</option>
+</select><br>
+
+Kelas :
+<select name="kelas">
+    <option>Eksekutif</option>
+    <option>Bisnis</option>
+    <option>Ekonomi</option>
+</select><br>
+
+Jumlah Tiket : <input type="text" name="jumlah"><br>
+
+Member :
+<input type="checkbox" name="member"> Ya<br>
+
+<input type="button" value="Hitung" onclick="hitung()">
+
+</form>
+</body>
+</html>

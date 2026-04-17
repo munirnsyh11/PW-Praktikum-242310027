@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>Faktorial dan Deret</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+function hitung()
+{
+    var n = document.fform.n.value;
+
+    var faktorial = 1;
+    var jumlah = 0;
+
+    for (i = 1; i <= n; i++)
+    {
+        faktorial = faktorial * i;
+        jumlah = jumlah + i;
+    }
+
+    document.fform.faktorial.value = faktorial;
+    document.fform.jumlah.value = jumlah;
+}
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<FORM NAME="fform">
+<TABLE BORDER="1" ALIGN="center">
+
+<TR>
+    <TD COLSPAN="2" ALIGN="center">
+        <B>PERHITUNGAN<br>FAKTORIAL dan DERET</B>
+    </TD>
+</TR>
+
+<TR>
+    <TD>N</TD>
+    <TD><input type="text" name="n"></TD>
+</TR>
+
+<TR>
+    <TD>Hasil</TD>
+    <TD>
+        <input type="button" value="Submit" onclick="hitung()">
+        <input type="reset" value="Reset">
+    </TD>
+</TR>
+
+<TR>
+    <TD>Faktorial</TD>
+    <TD><input type="text" name="faktorial"></TD>
+</TR>
+
+<TR>
+    <TD>Jumlah</TD>
+    <TD><input type="text" name="jumlah"></TD>
+</TR>
+
+</TABLE>
+</FORM>
+
+</BODY>
+</HTML>

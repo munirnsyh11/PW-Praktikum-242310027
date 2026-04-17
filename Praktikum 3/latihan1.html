@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Mahasiswa</title>
+    <script>
+        function kirim() {
+            var nim = document.formku.nim.value;
+            var nama = document.formku.nama.value;
+
+            var jk = "";
+            if (document.formku.laki.checked) {
+                jk = "Laki-laki";
+            } else if (document.formku.perempuan.checked) {
+                jk = "Perempuan";
+            }
+
+            var agama = document.formku.agama.value;
+
+            var status = "";
+            if (document.formku.menikah.checked) status += "Menikah ";
+            if (document.formku.lajang.checked) status += "Lajang ";
+
+            var jurusan = document.formku.jurusan.value;
+            var komentar = document.formku.komentar.value;
+
+            document.formku.onim.value = nim;
+            document.formku.onama.value = nama;
+            document.formku.ojk.value = jk;
+            document.formku.oagama.value = agama;
+            document.formku.ostatus.value = status;
+            document.formku.ojurusan.value = jurusan;
+            document.formku.okomentar.value = komentar;
+        }
+    </script>
+</head>
+
+<body>
+<h2>Form Input Mahasiswa</h2>
+<form name="formku">
+
+NIM : <input type="text" name="nim"><br>
+Nama : <input type="text" name="nama"><br>
+
+Jenis Kelamin :
+<input type="radio" name="laki">Laki-laki
+<input type="radio" name="perempuan">Perempuan<br>
+
+Agama :
+<select name="agama">
+    <option>Islam</option>
+    <option>Kristen</option>
+    <option>Hindu</option>
+</select><br>
+
+Status :
+<input type="checkbox" name="menikah">Menikah
+<input type="checkbox" name="lajang">Lajang<br>
+
+Jurusan :
+<select name="jurusan">
+    <option>TI</option>
+    <option>SI</option>
+</select><br>
+
+Komentar :<br>
+<textarea name="komentar"></textarea><br>
+
+<input type="button" value="KIRIM" onclick="kirim()">
+<input type="reset" value="ULANG">
+
+<h3>Output</h3>
+NIM : <input type="text" name="onim"><br>
+Nama : <input type="text" name="onama"><br>
+JK : <input type="text" name="ojk"><br>
+Agama : <input type="text" name="oagama"><br>
+Status : <input type="text" name="ostatus"><br>
+Jurusan : <input type="text" name="ojurusan"><br>
+Komentar : <input type="text" name="okomentar"><br>
+
+</form>
+</body>
+</html>

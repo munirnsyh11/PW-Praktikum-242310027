@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #f3ebdd;
+  color: #2d2d2d;
+  overflow-x: hidden;
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+}
+
+.container{
+  width: 90%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.tag{
+  display: inline-block;
+  margin-bottom: 16px;
+  letter-spacing: 3px;
+  color: #8b6b4a;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.section-title{
+  margin-bottom: 60px;
+}
+
+.section-title h2{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 24px 0;
+  transition: 0.4s;
+}
+
+.navbar-scrolled{
+  background: rgba(243,235,221,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 45px;
+  letter-spacing: 3px;
+}
